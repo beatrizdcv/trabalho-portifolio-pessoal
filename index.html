@@ -3,10 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function mostrarConteudo (selecao)  {
+         let conteudos = document.getElementsByClassName('conteudo');
+         for (let i =0; i<conteudos.length; i++)
+         {
+            conteudos[i].style.display = 'none';
+         }
+    document.getElementById(selecao).style.display= 'block';
+    }
+    </script>
     <title>Portifolio Beatriz Vieira</title>
 </head>
 <style>
-   
+   body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 20px;
+    background-color: cadetblue;
+   }
+   h1 {
+    text-align: center;
+   }
+   header {
+    text-align: center;
+   }
+   nav a {
+    margin-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #000000;
+
+   }
+    .conteudo {
+        display: none;
+        margin-top: 20px;
+
+    }
+   form input, form textarea {
+    display: block;
+    margin-bottom: 10px;
+    padding: 8px;
+   }
+   form button {
+    padding: 8px 16px;
+   }
+
 </style>
 <body>
     <header>
@@ -21,11 +65,12 @@
   <a id="contatolink">Contato</a>
     </nav>
 </header>
+<!--adicionei um rodapé-->
    <footer>
     <p>Beatriz Vieira 2025
     </p>
    </footer>
-
+<!--abaixo estão as seções sobre, formação, portifolio e contato-->
 <section id="sobre" class="conteudo">
   <h2>Sobre mim</h2>
   <p>
@@ -53,7 +98,7 @@
     Superior em andamento de Analise e Desenvolvimento de Sistemas
   </p>
 </section>
-  
+  <!--adicionei o formulario para entrarem em contato comigo-->
 <form>
     <input type="text" id="nome" value="Seu nome">
     <input type="email" id="email" value="seuemail@exemplo.com">
