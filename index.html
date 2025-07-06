@@ -47,44 +47,84 @@ document.getElementById('mensagem').addEventListener('focus', function() {
 <style>
    body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 20px;
     background-color: cadetblue;
+    padding-bottom: 60px;
    }
-   h1 {
-    text-align: center;
+
+header {
+  text-align: center;
+}
+   h1  {
+  text-align: center;
+  font-size: 30px;
+   border: 2px solid #000;
+  padding: 10px;
+  display: inline-block;
+  margin: 20px auto;
+  border-radius: 8px;
+  background-color: cadetblue;
+}
+ 
+   img {
+  display: block;
+  margin:0 auto;
+  max-width: 100%;
+  
    }
-   header {
-    text-align: center;
-   }
+
+   nav {
+  text-align: center;
+  margin-top: 20px;
+}
    nav a {
     margin-right: 20px;
-    text-align: center;
     text-decoration: none;
     color: #333;
     font-weight: bold;
+    font-size: 30px;
     cursor: pointer;
     border: 2px solid #000000;
-
-   }
+}
     .conteudo {
         display: none;
         margin-top: 20px;
+        text-align: center;
+        font-size: 25px;
 
+    }
+    form{
+        text-align: center;
     }
    form input, form textarea {
     display: block;
-    margin-bottom: 10px;
+    margin: 10px auto;
     padding: 8px;
+    font-size: 20px;
    }
    form button {
     padding: 8px 16px;
    }
+  footer {
+    position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  height: 50px;
+  }
+.borda-imagem {
+  border: 5px solid black;
+}
 
 </style>
 <body>
+
     <header>
-        <img src="imagens/capa.jpg" alt="Ilustração de dispositivos conectados com ícones de tecnologia e comunicação digital.">
-    <h1>Beatriz Vieira</h1>
+        <img src="imagens/capa.jpg" alt="Ilustração de dispositivos conectados com ícones de tecnologia e comunicação digital." class="borda-imagem">
+    <h1>Beatriz Vieira | Desenvolvedora em formação</h1>
+</header>
     
 <!-- abaixo o menu da barra de navegação -->
     <nav>
@@ -93,12 +133,6 @@ document.getElementById('mensagem').addEventListener('focus', function() {
   <a id="portifoliolink">Portifolio</a>
   <a id="contatolink">Contato</a>
     </nav>
-</header>
-<!--adicionei um rodapé-->
-   <footer>
-    <p>Beatriz Vieira 2025
-    </p>
-   </footer>
 <!--abaixo estão as seções sobre, formação, portifolio e contato-->
 <section id="sobre" class="conteudo">
   <h2>Sobre mim</h2>
@@ -115,16 +149,17 @@ document.getElementById('mensagem').addEventListener('focus', function() {
 </section>
 
 <section id="portifolio" class="conteudo">
-  <h2>Portifolio</h2>
+   <h2>Meus Projetos</h2>
+  <p>
+    Confira alguns dos projetos e códigos que venho desenvolvendo no meu repositório do GitHub:
+  </p>
   <p>
     <a href="https://github.com/beatrizdcv" target="_blank">My GitHub</a>
   </p>
 </section>
 
 <section id="contato" class="conteudo">
-  <h2>Contato</h2>
-
-</section>
+  <h2>Em caso de dúvidas entre em contato</h2>
   <!--adicionei o formulario para entrarem em contato comigo-->
 <form>
     <input type="text" id="nome" value="Seu nome">
@@ -132,6 +167,13 @@ document.getElementById('mensagem').addEventListener('focus', function() {
     <textarea id="mensagem">Escreva sua mensagem aqui</textarea>
     <button type="submit">Enviar</button>
 </form>
+</section>
+
+ <!--adicionei um rodapé-->
+   <footer>
+    <p>Beatriz Vieira - 2025
+    </p>
+   </footer>
 </body>
 </html>
 
