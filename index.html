@@ -13,8 +13,33 @@
     document.getElementById(selecao).style.display= 'block';
     }
 
-window.onload= function(){
+window.onload= function() {
+    mostrarConteudo('sobre')
+  
+document.getElementById('sobrelink').addEventListener('click', function() {
     mostrarConteudo('sobre');
+  });
+document.getElementById('formacaolink').addEventListener('click', function() {
+    mostrarConteudo('formacao');
+  });
+document.getElementById('portifoliolink').addEventListener('click', function() {
+    mostrarConteudo('portifolio');
+  });
+document.getElementById('contatolink').addEventListener('click', function() {
+    mostrarConteudo('contato');
+  });
+
+document.getElementById('nome').addEventListener('focus', function() {
+    this.value = '';
+  });
+
+document.getElementById('email').addEventListener('focus', function() {
+    this.value = '';
+  });
+
+document.getElementById('mensagem').addEventListener('focus', function() {
+    this.value = '';
+  });
 }
     </script>
     <title>Portifolio Beatriz Vieira</title>
@@ -98,9 +123,7 @@ window.onload= function(){
 
 <section id="contato" class="conteudo">
   <h2>Contato</h2>
-  <p>
-    Superior em andamento de Analise e Desenvolvimento de Sistemas
-  </p>
+
 </section>
   <!--adicionei o formulario para entrarem em contato comigo-->
 <form>
